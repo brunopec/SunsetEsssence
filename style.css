@@ -19,7 +19,14 @@
 /*======================================
 =              FONTES               =
 ======================================*/
-
+@font-face {
+    font-family: gorditas;
+    src: url(fontes/Gorditas-Regular.ttf) format("truetype");
+}
+@font-face {
+    font-family: gorditas-bold;
+    src: url(fontes/Gorditas-Bold.ttf) format("truetype");
+}
 /*======================================
 =              CABEÇALHO             =
 ======================================*/
@@ -48,6 +55,7 @@ main{
 footer{
     background-color: var(--cor2);
     color: var(--branco);
+    font-size: 10px;
     text-align: center;
     padding: 10px;
     bottom: 0;
