@@ -12,7 +12,8 @@
         <h1>Sunset Essence</h1>
         <nav>
             <a href="#home">Início</a>
-            <a href="#sobre">Sobre</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="produtos.html">Produtos</a>
             <a href="#contato">Contato</a>
         </nav>
     </header>
@@ -20,21 +21,28 @@
         <section class="contato">
             <h2>Contato</h2>
             <p>
-                Entre em contato conosco para obter mais informações sobre nossos produtos. </br></br>       
+                Entre em contato conosco para obter mais informações sobre nossos produtos. 
+            
+            </br></br>       
                 <strong>Telefone:</strong> <a href="https://wa.me/5545998300719" target="_blank">(45) 99687700</a></br> 
-             <div class="img-logo">
+            <div class="img-logo">
                 <a href="https://www.instagram.com/sunsetessence7/" target="_blank" rel="noopener">
-                    <img src="image/insta-logo.png" alt="Perfil Instagram Sunset Essence" width="32" height="32">
+                    <img src="../imagem/insta-logo.png" alt="Perfil Instagram Sunset Essence" width="32" height="32">
                 </a>
+                </br>
                 <a href="https://wa.me/554599687700" target="_blank" rel="noopener">
-                    <img src="image/whats-logo.png" alt="WhatsApp Sunset Essence" width="32" height="32">
+                    <img src="../imagem/whats-logo.png" alt="WhatsApp Sunset Essence" width="32" height="32">
                 </a>
             </div>
-            </p>
         </section>
     </main>
     <footer>
-        <p>&copy; 2026 <a href="https://hexistech.com.br" target="_blank">Hexis Tech</a>. Todos os direitos reservados.</p>
+        <p>&copy; <span id="ano"></span> <a href="https://hexistech.com.br" target="_blank">Hexis Tech</a>.
+            Todos os direitos reservados.</p>
+        <script>
+            const anoAtual = new Date().getFullYear(); 
+            document.getElementById("ano").textContent = anoAtual;
+        </script>
     </footer>
 </body>
 </html>

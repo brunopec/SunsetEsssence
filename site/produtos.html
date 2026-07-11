@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Produtos | Sunset Essence</title>
+</head>
+<body>
+    <header>
+        <h1>Sunset Essence</h1>
+        <nav>
+            <a href="#home">Início</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Produtos</h1>
+        <p>Confira nossos produtos abaixo:</p>
+        <ul>
+            <li><img src="../imagem/chic.jpg" alt="Produto 1" width="200" height="200"></li>
+            <li><img src="../imagem/chic.jpg" alt="Produto 2" width="200" height="200"></li>
+            <li><img src="../imagem/chic.jpg" alt="Produto 3" width="200" height="200"></li>
+        </ul>
+    </main>
+    <footer>
+        <p>&copy; <span id="ano"></span> <a href="https://hexistech.com.br" target="_blank">Hexis Tech</a>.
+            Todos os direitos reservados.</p>
+        <script>
+            const anoAtual = new Date().getFullYear(); 
+            document.getElementById("ano").textContent = anoAtual;
+        </script>
+    </footer>
+</body>
+</html>

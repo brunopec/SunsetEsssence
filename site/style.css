@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /*======================================
-=              VARIÁVEIS               =
+=               VARIÁVEIS              =
 ======================================*/
 :root{
     --cor0:#1F2327;
@@ -17,7 +17,7 @@
     --sombra:rgba(0,0,0,.15);
 }
 /*======================================
-=              FONTES               =
+=                FONTES                =
 ======================================*/
 @font-face {
     font-family: gorditas;
@@ -32,14 +32,15 @@
     src: url(fontes/RoxboroughCF-Regular.ttf) format("truetype");
 }
 /*======================================
-=              CABEÇALHO             =
+=              CABEÇALHO               =
 ======================================*/
 header{
-    background-color: var(--cor4);
-    color: var(--branco);
-    padding: 20px;
+    background-color: var(--branco);
+    color: var(--preto);
+    padding: 10px;
     text-align: center;
     position: relative;
+    opacity: 0.8; 
 }
 header h1{
     font-family: Roxborough;
@@ -50,45 +51,59 @@ header nav{
     margin-top: 10px;
 }
 header nav a{
-    color: var(--branco);
+    color: var(--preto);
     text-decoration: none;
-    margin: 0 10px;
     font-size: 18px;
+    padding: 5px;
+    margin: 0 5px; 
+    border-radius: 5px;
+    transition: background-color 0.3s; 
 }
 header nav a:hover{
+    background-color: var(--cor5);
     text-decoration: underline;
 }
 /*======================================
-=              CONTEÚDO            =
+=               CONTEÚDO               =
 ======================================*/
 body{
     background-color: var(--branco);
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 10px;
+    padding-bottom: 60px; 
+    text-align: center;
     font-family: Arial, sans-serif;
 }
-main{
-    background-color: var(--cor4);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px;
+body h2{
+    font-family: Roxborough;
+    font-size: 36px;
+    background-color: var(--cor5);
+    color: var(--preto);
+    margin-bottom: 0px;
+    border-radius: 5px;
 }
+.sobre img{
+    display: block; 
+    margin: 20px auto 0 auto; 
+    width: 300px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px var(--cor2);
+}
+
 /*======================================
-=              RODAPÉ             =
+=               RODAPÉ                 =
 ======================================*/
 footer{
-    background-color: var(--cor5);
+    background-color: var(--cor4);
     color: var(--branco);
-    font-size: 0.6em;
+    font-size: 0.7em; 
     text-align: center;
     padding: 0px;
     bottom: 0px;
     width: 100%;
     position: fixed;
+    left: 0; 
 }
 footer a{
     color: var(--preto);
