@@ -85,16 +85,34 @@ body h2{
 /*======================================
 =               PRODUTOS                =
 ======================================*/
-.imagem-produtos {
-    display: flex; 
-    flex-flow: row wrap;
-    align-items: flex-start;
-    align-content: column;
-    justify-content: center;
-
+h3{
+    font-family: gorditas;
+    font-size: 20px;
+    color: var(--cor0);
+    margin: 0px;
+    padding: 10px;
+    height: auto;
+    width: 250px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 3px 3px var(--cor4);
 }
-.imagem-produtos img{
-    display: block; 
+p.descricao{
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: var(--preto);
+    text-align: justify;
+    margin: 0px;
+    padding: 10px;
+    height: auto;
+    width: 250px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 3px 3px var(--cor4);
+}
+
+main .produtos img{
+    display: flex;
+    flex-flow: row;
+    align-content: stretch; 
     margin: 20px auto 0 20px;
     width: 200px;
     height: auto;
