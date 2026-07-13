@@ -31,6 +31,17 @@
     font-family: Roxborough;
     src: url(fontes/RoxboroughCF-Regular.ttf) format("truetype");
 }
+@font-face {
+    font-family: Cormorant;
+    src: url(fontes/CormorantGaramond.ttf) format("truetype");
+}
+@font-face {
+    font-family: Playfair Display;
+    src: url(fontes/PlayfairDisplay-Regular.ttf) format("truetype");
+}
+
+
+
 /*======================================
 =              CABEÇALHO               =
 ======================================*/
@@ -68,7 +79,6 @@ header nav a:hover{
 ======================================*/
 body {
     /* Suas configurações originais (Mantidas!) */
-    background-color: var(--branco);
     margin: 0px;
     padding: 0px;
     padding-bottom: 60px; 
@@ -81,22 +91,68 @@ body {
     min-height: 100vh; 
 }
 
-body h2 {
-    /* Suas configurações originais (Mantidas!) */
+h2.titulopage {
     font-family: Roxborough;
+    margin: 20px;
     font-size: 36px;
     background-color: var(--cor5);
     color: var(--preto);
     margin-bottom: 0px;
     border-radius: 5px;
-    
-    /* Ajuste extra: remove a margem de cima do h2 para sumir com a faixa branca */
     margin-top: 0px; 
 }
 
 /* Adicione essa regra para o seu main (ela é a chave do segredo) */
 main {
     flex: 1;
+}
+
+/*======================================
+=               HOME PAGE                =
+======================================*/
+#start_home img{
+    width: 60vw;
+    height: 400px;
+    padding: 10px;
+}
+#start_home h1{
+    font-family: Cormorant, Playfair Display;
+    font-size: 36px;
+    color: var(--branco);
+    margin-top: -300px; 
+}
+#start_home p{
+    font-family: Inter;
+    font-size: 18px;
+    color: var(--branco);
+    margin-top: 10px; 
+}
+#proposito{
+    grid-template-columns: 1/2; /* Duas colunas de tamanho igual */
+    display: grid;
+}
+#proposito img{
+    margin:10px;
+    padding: 30px;
+    width: 250px;
+    height: 250px;
+    border-radius: 30px;
+
+}
+#proposito h1{
+    font-family: Cormorant, Playfair Display;
+    font-size: 24px;
+    background-color: var(--branco);
+    color: var(--preto);
+    margin-top: 10px; 
+}
+#proposito p{
+    font-family: Inter;
+    font-size: 18px;
+    color: var(--preto);
+    margin-top: 10px; 
+    text-align: justify;
+    
 }
 
 /*======================================
