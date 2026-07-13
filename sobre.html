@@ -4,36 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Sobre | Sunset Essence7</title>
+    <title>Sobre | Sunset Essence</title>
 </head>
 <body>
     <header>
-        <h1>Sobre Nós</h1> 
+        <h1>Sunset Essence</h1>
         <nav>
-            <ul>
-                <a href="index.html">Home</a>
-                <a href="sobre.html">Sobre</a>
-                <a href="produtos.html">Produtos</a>
-                <a href="#faixadecontato">Contato</a>
-            </ul>
+            <a href="index.html">Início</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="#contato">Contato</a>
         </nav>
     </header>
+    <h2>Sobre Nós</h2>
     <main>
-        <p>
-            Fundada em 2024, tem como missão oferecer sofisticação e bem-estar por meio de velas
-            aromáticas e difusores artesanais. Com foco na qualiade, sustentabilidade e design
-            minimalista, nossos produtos são feits à mão pois prezamos pela qualidade para harmonizar
-            com qualquer ambiente, proporcionando não apenas fragrâncias delicadas, mas também elegânica e charme.
-        </br>
-        </br>
-
-            Buscamos transformar espaços em refúgios de calma e estilo,
-            atendendo a clientes que valorizam conforto e sofisticação, seja em casa ou no trabalho
-        <p>
-        
+        <div class="sobre">
+            <img src="imagem/sobre.jpg" alt="Velas acessas">
+            <p>Fundada em 2024, tem como missão oferecer sofisticação e bem-estar por meo de velas 
+                aromáticas e difusores artesanais. Com foco na qualidade, sustentabilidade e design minimalista,
+                nossos produtos são feitos à mão, pois prezamos pela qualidade para harmonizar com qualquer
+                ambiente, proporcionando não apenas fragrâncias delicadas, mas também elegância e charme.
+                </br>
+                Buscamos transformar espaços em refúgios de calma e estilo, atendendo a clientes que valorizam 
+                conforto e sofisticação, seja em casa ou no trabalho.
+                </br>
+            </p>
+        </div>
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>
+                Entre em contato conosco para obter mais informações sobre nossos produtos. 
+            
+            </br></br>       
+                <strong>Telefone:</strong> <a href="https://wa.me/5545998300719" target="_blank">(45) 99687700</a></br> 
+            <div class="img-logo">
+                <a href="https://www.instagram.com/sunsetessence7/" target="_blank" rel="noopener">
+                    <img src="imagem/insta-logo.png" alt="Perfil Instagram Sunset Essence" width="32" height="32">
+                </a>
+                </br>
+                <a href="https://wa.me/554599687700" target="_blank" rel="noopener">
+                    <img src="imagem/whats-logo.png" alt="WhatsApp Sunset Essence" width="32" height="32">
+                </a>
+            </div>
+        </section>
     </main>
     <footer>
-        <p>&copy; 2026 <a href="https://hexistech.com.br" target="_blank">Hexis Tech</a>. Todos os direitos reservados.</p>
+        <p>&copy; <span id="ano"></span> <a href="https://hexistech.com.br" target="_blank">Hexis Tech</a>.
+            Todos os direitos reservados.</p>
+        <script>
+            const anoAtual = new Date().getFullYear(); 
+            document.getElementById("ano").textContent = anoAtual;
+        </script>
     </footer>
 </body>
 </html>

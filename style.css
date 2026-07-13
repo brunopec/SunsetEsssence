@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /*======================================
-=              VARIÁVEIS               =
+=               VARIÁVEIS              =
 ======================================*/
 :root{
     --cor0:#1F2327;
@@ -15,141 +15,200 @@
     --preto:#222;
     --cinza:#555;
     --sombra:rgba(0,0,0,.15);
-} 
-
+}
 /*======================================
-=             FONTES              =
+=                FONTES                =
 ======================================*/
-
-@import url('https://fonts.googleapis.com/css2?family=Gorditas:wght@400;700&family=Kaushan+Script&display=swap');
-
-@font-face{
-    font-family: 'Gorditas';
-    src: url('fonts/Gorditas-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+@font-face {
+    font-family: gorditas;
+    src: url(fontes/Gorditas-Regular.ttf) format("truetype");
+}
+@font-face {
+    font-family: gorditas-bold;
+    src: url(fontes/Gorditas-Bold.ttf) format("truetype");
 }
 @font-face{
-    font-family: 'Kaushan';
-    src: url('fonts/KaushanScript-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+    font-family: Roxborough;
+    src: url(fontes/RoxboroughCF-Regular.ttf) format("truetype");
 }
-@font-face{
-    font-family: 'rox';
-    src: url('fonts/Rox.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 /*======================================
-=             CABEÇALHO              =
+=              CABEÇALHO               =
 ======================================*/
-
 header{
+    background-color: var(--branco);
+    color: var(--preto);
+    padding: 10px;
+    text-align: center;
     position: relative;
-    top: 0;
-    padding: 0px;
-    margin: 0px;
-    font-family: 'Gorditas';
-    font-size: 1em;
-    text-align: center;
+    opacity: 0.8; 
 }
-nav{
-    font-family: 'Kaushan', cursive;
-    color: var(--branco);
-    padding: 0px;
-    margin: 5px;
-    text-align: center;
+header h1{
+    font-family: Roxborough;
+    font-size: 36px;
+    margin: 0;
 }
-nav a{
+header nav{
+    margin-top: 10px;
+}
+header nav a{
     color: var(--preto);
     text-decoration: none;
-    margin: 0 10px;
-    padding: 5px 10px;
+    font-size: 18px;
+    padding: 5px;
+    margin: 0 5px; 
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s; 
 }
-nav a:hover{
-    background-color: var(--cor4);
+header nav a:hover{
+    background-color: var(--cor5);
     text-decoration: underline;
-    color: var(--cor1);
 }
-
-body{
-    
+/*======================================
+=               CONTEÚDO               =
+======================================*/
+body {
+    /* Suas configurações originais (Mantidas!) */
     background-color: var(--branco);
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
+    padding-bottom: 60px; 
+    text-align: center;
     font-family: Arial, sans-serif;
+
+    /* Novas propriedades para colar o rodapé embaixo */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
 }
 
+body h2 {
+    /* Suas configurações originais (Mantidas!) */
+    font-family: Roxborough;
+    font-size: 36px;
+    background-color: var(--cor5);
+    color: var(--preto);
+    margin-bottom: 0px;
+    border-radius: 5px;
+    
+    /* Ajuste extra: remove a margem de cima do h2 para sumir com a faixa branca */
+    margin-top: 0px; 
+}
+
+/* Adicione essa regra para o seu main (ela é a chave do segredo) */
+main {
+    flex: 1;
+}
 
 /*======================================
-=             CONTEÚDO             =
+=               PRODUTOS                =
+======================================*/
+.colecao {
+    display: grid;
+    /* Criamos duas colunas na linha de baixo: uma de 200px (foto) e outra de 250px (texto) */
+    grid-template-columns: 200px 250px; 
+    justify-content: center; /* Centraliza o bloco inteiro na tela */
+    align-items: center; /* Centraliza a foto verticalmente ao lado do texto */
+    gap: 20px; /* Espaço entre o título, a foto e a descrição */
+    margin-bottom: 40px; /* Espaço entre um produto e outro */
+}
+
+.colecao h3.Título {
+    /* O segredo: faz o título começar na coluna 1 e ir até a 3 (ocupando as duas colunas) */
+    grid-column: 1 / 3;
+    justify-self: center; /* Centraliza o título horizontalmente */ 
+    text-align: center; /* Deixa o título centralizado no topo */
+    margin: 0;
+    padding: 10px;
+    width: 250px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0px 2px 2px 2px var(--cor2);
+}
+
+.produtos img {
+    width: 210px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px var(--cor2);
+    margin: 0; 
+}
+
+p.descricao {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: var(--preto);
+    text-align: justify;
+    padding: 20px;
+    height: auto;
+    width: 250px;
+    border-radius: 20px;
+    box-shadow: 0px 2px 2px 2px var(--cor2);
+    margin: 0; 
+}
+
+/*======================================
+=               SOBRE                =
 ======================================*/
 
-
-main{
-    background-color: var(--cor4);
+.sobre {
     display: flex;
-    justify-content: center;
+    flex-flow: row;
+    align-content: center;
     align-items: center;
-    height: auto;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px;
-}
+    margin: 20px auto;
+    padding: 20px 30px 20px 30px;
 
+}
+.sobre img{
+    display: block; 
+    margin: 20px auto 0 20px;
+    width: 300px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px var(--cor2);
+}
+.sobre p{
+    margin: 20px auto;
+    padding: 40px;
+    text-align: justify;
+    align-items: center;
+    align-content: center;
+}
 /*======================================
-=             CONTATO             =
+=               CONTATO               =
 ======================================*/
 
 #contato{
     background-color: var(--cor4);
-    display: flex;
-    flex-direction: column;   
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px;
+    color: var(--branco);
+    font-size: 0.7em; 
+    text-align: center;
+    padding: 0px;
+    bottom: 0px;
+    width: 100%;
+    position: relative;
+    left: 0; 
 }
 #contato h2{
-    font-family: 'Kaushan';
-    color: var(--preto);
-    text-align: center;
-    margin-bottom: 10px;
-}
-#faixadecontato{
     background-color: var(--cor4);
-    display: flex;
-    flex-direction: column;   
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px;
-}
 
-#contato a{ 
-    color: var(--cor2);
-    text-decoration: none;
-    font-size: 0.9em;
 }
 
 /*======================================
-=             RODAPÉ              =
+=               RODAPÉ                 =
 ======================================*/
-
 footer{
-    font-family: Arial, sans-serif;
-    font-size: 0.8em;
+    background-color: var(--cor4);
+    color: var(--branco);
+    font-size: 0.7em; 
     text-align: center;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    padding: 0px;
+    bottom: 0px;
     width: 100%;
+    position: relative;
+    left: 0; 
+}
+footer a{
+    color: var(--preto);
+    text-decoration: none;
 }
