@@ -112,9 +112,10 @@ main {
 =               HOME PAGE                =
 ======================================*/
 #start_home img{
-    width: 75vw;
+    width: 100vw;
     height: 450px;
-    padding: 10px;
+    padding: 40px;
+    object-fit: cover;
 }
 #start_home h1{
     font-family: Cormorant, Playfair Display;
@@ -124,7 +125,7 @@ main {
 }
 #start_home a{
     display: inline-block;
-    margin-top: 20px;
+    margin: 20px 0px 20px 0px;
     padding: 10px 20px;
     background-color: var(--cor1);
     color: var(--branco);
@@ -141,39 +142,54 @@ main {
     color: var(--branco);
     margin-top: 10px; 
 }
-#proposito{
+#proposito {
     display: grid;
-    /* Criamos duas colunas na linha de baixo: uma de 200px (foto) e outra de 250px (texto) */
-    grid-template-columns: 200px 250px; 
-    flex-flow: row nowrap; 
-    justify-content: center; /* Centraliza o bloco inteiro na tela */
-    align-items: center; /* Centraliza a foto verticalmente ao lado do texto */
-    text-align: center; /* Centraliza o texto */
-    margin-top: 80px; /* Espaço entre um produto e outro */
+    /* Criamos duas colunas: 250px (imagem) e 350px (texto) */
+    grid-template-columns: 250px 350px; 
+    /* Deixamos as linhas se ajustarem automaticamente ao tamanho do conteúdo */
+    grid-template-rows: auto auto; 
+    justify-content: center; /* Centraliza todo o bloco na tela */
+    align-items: center;     /* Alinha verticalmente os elementos */
+    gap: 10px 40px;          /* 10px de espaço vertical entre h2 e p, 40px horizontal entre imagem e texto */
+    margin-top: 80px; 
+    padding: 20px; /* Espaço interno para não colar no conteúdo */
 }
-#proposito img{
-    display: flex;
-    margin:10px;
-    padding: 30px;
+
+/* 1. A imagem ocupa a Coluna 1 e passa pelas Linhas 1 e 2 */
+#proposito img {
+    grid-column: 1;
+    grid-row: 1 / 3; /* Começa na linha 1 e vai até a 3 (ocupa 2 linhas) */
     width: 250px;
     height: 250px;
     border-radius: 50px;
+    object-fit: cover;
+    margin: 0; /* Zeramos margens para não desalinharem o Grid */
+}
 
-}
-#proposito h1{
-    font-family: Cormorant, Playfair Display;
+/* 2. O título fica na Coluna 2, Linha 1 */
+#proposito h2 {
+    grid-column: 2;
+    grid-row: 1;
+    font-family: Cormorant, "Playfair Display", serif;
     font-size: 24px;
-    background-color: var(--branco);
     color: var(--preto);
-    margin-top: 10px; 
+    text-align: left; /* Alinha o título à esquerda, combinando com o parágrafo */
+    margin: 0; 
+    padding: 10px;
+    align-self: end; /* Empurra o título levemente para baixo, aproximando-o do parágrafo */
 }
-#proposito p{
-    font-family: Inter;
-    font-size: 18px;
+
+/* 3. O parágrafo fica na Coluna 2, Linha 2 (exatamente abaixo do h2) */
+#proposito p {
+    grid-column: 2;
+    grid-row: 2;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
     color: var(--preto);
-    margin-top: 10px; 
     text-align: justify;
-    
+    line-height: 1.5;
+    margin: 0;
+    align-self: start; /* Garante que o texto comece logo abaixo do título */
 }
 #produtohome{
     width: 250px;
@@ -181,6 +197,60 @@ main {
     border-radius: 50px;
     margin: 10px;
     padding: 30px;
+}
+.vitrine {
+    display: grid;
+    /* Criamos 3 colunas iguais (uma para cada item da vitrine) */
+    grid-template-columns: repeat(3, 300px); 
+    justify-content: center; /* Centraliza a vitrine inteira na tela */
+    gap: 30px; /* Espaço entre os cartões dos produtos */
+    padding: 40px 10px;
+    margin-top: 20px;
+}
+
+/* Faz o título principal ocupar a largura das 3 colunas no topo */
+.titulo-vitrine {
+    grid-column: 1 / 4; 
+    font-family: Cormorant, "Playfair Display", serif;
+    font-size: 32px;
+    color: var(--preto);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.item_vitrine1, .item_vitrine2, .item_vitrine3 {
+    background-color: var(--branco);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px var(--sombra); 
+    border: 1px solid var(--cor4); 
+    text-align: center;
+}
+
+.vitrine img {
+    width: 180px;
+    height: 180px;
+    border-radius: 20px;
+    object-fit: cover;
+    margin: 0px;
+}
+
+.vitrine h2.Título {
+    font-family: Cormorant, "Playfair Display", serif;
+    font-size: 24px;
+    color: var(--preto);
+    margin: 0;
+}
+
+
+.vitrine .textocurto {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    color: var(--cinza);
+    text-align: justify;
+    line-height: 1.4;
+    margin: 0;
 }
 /*======================================
 =               PRODUTOS                =
