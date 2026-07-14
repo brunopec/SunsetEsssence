@@ -71,7 +71,7 @@ header nav a{
     transition: background-color 0.3s; 
 }
 header nav a:hover{
-    background-color: var(--cor5);
+    background-color: var(--cor1);
     text-decoration: underline;
 }
 /*======================================
@@ -95,7 +95,8 @@ h2.titulopage {
     font-family: Roxborough;
     margin: 20px;
     font-size: 36px;
-    background-color: var(--cor5);
+    background-color: var(--cor1);
+    
     color: var(--preto);
     margin-bottom: 0px;
     border-radius: 5px;
@@ -111,8 +112,8 @@ main {
 =               HOME PAGE                =
 ======================================*/
 #start_home img{
-    width: 60vw;
-    height: 400px;
+    width: 75vw;
+    height: 450px;
     padding: 10px;
 }
 #start_home h1{
@@ -121,6 +122,19 @@ main {
     color: var(--branco);
     margin-top: -300px; 
 }
+#start_home a{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--cor1);
+    color: var(--branco);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s; 
+}
+#start_home a:hover{
+    background-color: var(--cor4);
+}
 #start_home p{
     font-family: Inter;
     font-size: 18px;
@@ -128,15 +142,22 @@ main {
     margin-top: 10px; 
 }
 #proposito{
-    grid-template-columns: 1/2; /* Duas colunas de tamanho igual */
     display: grid;
+    /* Criamos duas colunas na linha de baixo: uma de 200px (foto) e outra de 250px (texto) */
+    grid-template-columns: 200px 250px; 
+    flex-flow: row nowrap; 
+    justify-content: center; /* Centraliza o bloco inteiro na tela */
+    align-items: center; /* Centraliza a foto verticalmente ao lado do texto */
+    text-align: center; /* Centraliza o texto */
+    margin-top: 80px; /* Espaço entre um produto e outro */
 }
 #proposito img{
+    display: flex;
     margin:10px;
     padding: 30px;
     width: 250px;
     height: 250px;
-    border-radius: 30px;
+    border-radius: 50px;
 
 }
 #proposito h1{
@@ -154,7 +175,13 @@ main {
     text-align: justify;
     
 }
-
+#produtohome{
+    width: 250px;
+    height: 250px;
+    border-radius: 50px;
+    margin: 10px;
+    padding: 30px;
+}
 /*======================================
 =               PRODUTOS                =
 ======================================*/
@@ -231,30 +258,59 @@ p.descricao {
     align-content: center;
 }
 /*======================================
-=               CONTATO               =
+=               CONTATO                =
 ======================================*/
-
-#contato{
-    background-color: var(--cor4);
+#contato {
+    background-color: var(--cor1);
     color: var(--branco);
-    font-size: 0.7em; 
+    font-size: 0.8em; 
     text-align: center;
-    padding: 0px;
-    bottom: 0px;
+    padding: 20px 10px; /* Padding ajustado para não ficar sufocado */
     width: 100%;
-    position: relative;
-    left: 0; 
 }
-#contato h2{
-    background-color: var(--cor4);
 
+#contato h2 {
+    background-color: var(--cor1);
+    margin-top: 0;
+}
+
+#contato img {
+    width: 32px;
+    height: 32px;
+}
+
+/* O container que segura as duas redes sociais */
+#contato .img-rede {
+    display: flex;
+    flex-direction: column; /* Coloca uma rede social abaixo da outra */
+    align-items: center;    /* Centraliza os blocos no meio da tela */
+    gap: 15px;              /* Espaço de 15px entre a linha do Insta e do Whats */
+    margin-top: 20px;
+}
+
+/* O segredo: Cada linha vira um flexbox alinhado horizontalmente */
+.linha-rede {
+    display: flex;
+    align-items: center;    /* Alinha a imagem perfeitamente no meio (vertical) do texto */
+    gap: 10px;              /* Espaço entre a imagem e o texto do link */
+    width: fit-content;     /* Faz o bloco ter apenas o tamanho do seu conteúdo */
+}
+
+#contato a {
+    color: var(--branco);
+    text-decoration: none;
+}
+
+#contato a:hover {
+    text-decoration: underline;
+    color: var(--preto);
 }
 
 /*======================================
 =               RODAPÉ                 =
 ======================================*/
 footer{
-    background-color: var(--cor4);
+    background-color: var(--cor1);
     color: var(--branco);
     font-size: 0.7em; 
     text-align: center;
@@ -265,6 +321,10 @@ footer{
     left: 0; 
 }
 footer a{
-    color: var(--preto);
+    color: var(--branco);
     text-decoration: none;
+}
+footer a:hover{
+    color: var(--preto);
+    text-decoration: underline;
 }
