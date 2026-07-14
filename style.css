@@ -543,12 +543,10 @@ footer a:hover {
 
     header nav a {
         font-size: 16px;
-
         margin: 3px;
     }
     h2.titulopage {
         font-size: 28px;
-
         margin: 0 10px;
     }
     #start_home {
@@ -559,9 +557,7 @@ footer a:hover {
     }
     #proposito {
         grid-template-columns: 1fr;
-
         gap: 20px;
-
         margin-top: 40px;
     }
     #proposito img {
@@ -569,7 +565,6 @@ footer a:hover {
     }
     #proposito-texto {
         max-width: 500px;
-
         margin: auto;
     }
     #proposito h2 {
@@ -577,7 +572,6 @@ footer a:hover {
     }
     .vitrine {
         grid-template-columns: minmax(0, 350px);
-
         padding: 30px 15px;
     }
     .titulo-vitrine {
@@ -592,14 +586,11 @@ footer a:hover {
     }
     .colecao {
         grid-template-columns: 1fr;
-
         padding: 20px;
     }
     .colecao h3.Título {
         grid-column: 1;
-
         width: 100%;
-
         max-width: 300px;
     }
     .produtos img {
@@ -607,24 +598,19 @@ footer a:hover {
     }
     p.descricao {
         width: 100%;
-
         max-width: 400px;
-
         margin: auto;
     }
     .sobre {
         flex-direction: column;
-
         padding: 20px;
     }
     .sobre img {
         width: 100%;
-
         max-width: 300px;
     }
     .sobre p {
         padding: 20px;
-
         width: 100%;
     }
 
