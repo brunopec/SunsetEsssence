@@ -490,6 +490,30 @@ p.descricao {
     text-decoration: underline;
     color: var(--preto);
 }
+/*======================================
+=                 FLUTUANTE            =
+======================================*/
+.flutuante {
+    position: fixed;
+    width: 70px;
+    height: 70px;
+    bottom: 40px; 
+    right: 20px;
+    z-index: 1000;
+    transition: transform 0.3s ease; 
+}
+
+
+.flutuante img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+}
+
+
+.flutuante:hover {
+    transform: scale(1.1); 
+}
 
 
 /*======================================
